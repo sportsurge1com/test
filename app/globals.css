@@ -1,0 +1,91 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 251 46% 7%; /* #0A0717 */
+    --foreground: 0 0% 95%; /* Light Gray */
+    --card: 251 40% 12%;
+    --card-foreground: 0 0% 95%;
+    --popover: 251 40% 10%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 277 76% 53%; /* #8A2BE2 */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 251 30% 25%;
+    --secondary-foreground: 0 0% 90%;
+    --muted: 251 30% 20%;
+    --muted-foreground: 251 20% 75%; /* Lighter gray for body text */
+    --accent: 283 100% 50%; /* #B400FF */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 251 30% 20%;
+    --input: 251 30% 15%;
+    --ring: 277 76% 60%;
+    --radius: 0.5rem;
+
+    /* Sidebar variables aligned with new theme */
+    --sidebar-background: 251 46% 5%; /* Even darker */
+    --sidebar-foreground: 0 0% 92%;
+    --sidebar-primary: 277 76% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 251 40% 15%; /* Hover state */
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 251 40% 10%;
+    --sidebar-ring: 277 76% 60%;
+  }
+
+  .dark {
+    --background: 251 46% 7%;
+    --foreground: 0 0% 95%;
+    --card: 251 40% 12%;
+    --card-foreground: 0 0% 95%;
+    --popover: 251 40% 10%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 277 76% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 251 30% 25%;
+    --secondary-foreground: 0 0% 90%;
+    --muted: 251 30% 20%;
+    --muted-foreground: 251 20% 75%;
+    --accent: 283 100% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 251 30% 20%;
+    --input: 251 30% 15%;
+    --ring: 277 76% 60%;
+
+    --sidebar-background: 251 46% 5%;
+    --sidebar-foreground: 0 0% 92%;
+    --sidebar-primary: 277 76% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 251 40% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 251 40% 10%;
+    --sidebar-ring: 277 76% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Subtle cosmic background */
+    background-image: 
+      radial-gradient(ellipse at 70% 20%, hsla(283, 100%, 50%, 0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at 30% 80%, hsla(277, 76%, 53%, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, hsla(0, 0%, 100%, 0.02) 0%, hsla(0, 0%, 100%, 0.02) 1px, transparent 1px),
+      radial-gradient(circle at 25% 30%, hsla(0, 0%, 100%, 0.02) 0%, hsla(0, 0%, 100%, 0.02) 1px, transparent 1px),
+      radial-gradient(circle at 75% 80%, hsla(0, 0%, 100%, 0.02) 0%, hsla(0, 0%, 100%, 0.02) 1px, transparent 1px);
+    background-attachment: fixed;
+  }
+}
