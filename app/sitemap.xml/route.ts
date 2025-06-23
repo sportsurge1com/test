@@ -4,7 +4,7 @@ import { nflTeams } from '@/lib/nfl-teams'; // Import NFL teams
 import type { SportEvent } from '@/lib/types';
 import type { MetadataRoute } from 'next';
 
-const URL = 'https://www.sportsurge.uno';
+const URL = 'https://sportsurge2.vercel.app/';
 
 export async function GET() {
   const events = await getAllEventsCombined(); 

@@ -4,6 +4,7 @@ import type {NextConfig} from 'next';
 const nextConfig: NextConfig = {
   /* config options here */
   typescript: {
+    // !! WARN !!
     ignoreBuildErrors: true,
   },
   eslint: {
@@ -37,6 +38,7 @@ const nextConfig: NextConfig = {
   //     }
   //   ],
   // },
+  output: 'standalone',
 };
 
 export default nextConfig;
